@@ -1,0 +1,12 @@
+.chat {
+    padding: 20px;
+
+    .empty {
+        color: #666;
+        font-style: italic;
+    }
+
+    .owned {
+        color: green;
+    }
+}

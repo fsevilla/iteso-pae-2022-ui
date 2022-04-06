@@ -1,0 +1,11 @@
+<div class="chat">
+    <div>
+        <p [ngClass]="{'owned': msg.owned}" *ngFor="let msg of messages">{{msg.message}}</p>
+        <p class="empty" *ngIf="!messages.length">No hay mensajes</p>
+    </div>
+
+    <form (submit)="send()">
+        <input name="msg" type="text" [(ngModel)]="message">
+        <button [disabled]="!message">Enviar</button>
+    </form>
+</div>

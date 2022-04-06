@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChatComponent } from './pages/chat/chat.component';
 
 import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
   { path: 'posts', component: PostsComponent, canActivate: [AuthGuard] },
+  { path: 'chat', component: ChatComponent },
   { path: 'users/:userId/posts', component: PostsComponent, canActivate: [AuthGuard] },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '404', pathMatch: 'full' },
